@@ -8,21 +8,6 @@
     box-sizing: border-box;
 }
 
-.Input {
-    display: block;
-    width: 100%;
-    margin: 0 auto;
-}
-
-.Input:not(:last-of-type){
-    margin-bottom: 14px;
-}
-
-.Input::placeholder{
-    text-align: center;
-}
-
-
 @media (min-width: 600px) {
     .ContactData {
         width: 500px;
