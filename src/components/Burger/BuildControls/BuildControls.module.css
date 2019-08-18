@@ -1,5 +1,6 @@
 .BuildControls {
     width: 100%;
+    height: 40vh;
     background-color: #cf8f2E;
     display: flex;
     flex-flow: column;
@@ -50,5 +51,11 @@
     }
     100% {
         transform: scale(1);
+    }
+}
+
+@media (max-width: 500px) and (min-height: 400px){
+    .BuildControls {
+        height: 50vh;
     }
 }

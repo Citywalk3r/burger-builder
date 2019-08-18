@@ -1,4 +1,10 @@
 import React from 'react'
+
+// withRouter provides routing props to child
+// components of the components that gets Routed
+// if we wrap the export with it.
+// import { withRouter } from 'react-router-dom'
+
 import classes from './Burger.module.css'
 import BurgerIngredient from './BurgerIngredient/BurgerIngredient'
 
@@ -24,5 +30,10 @@ const burger = (props) => {
         </div>
     )
 }
+
+// withRouter provides routing props to child
+// components of the components that gets Routed
+// if we wrap the export with it.
+// export default withRouter(burger)
 
 export default burger

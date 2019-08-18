@@ -5,6 +5,10 @@
     margin: 5px 0;
 }
 
+.BuildControl:last-of-type{
+    margin-bottom: 25px;
+}
+
 button {
     display: block;
     font: inherit;
