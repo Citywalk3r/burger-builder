@@ -1,10 +1,11 @@
 import * as actionTypes from '../actions/actionTypes'
-import { updateObject } from '../utility'
+import { updateObject } from '../../shared/utility'
 
 const initialState = {
     ingredients: null,
     totalPrice: 2,
-    error: false
+    error: false,
+    building: false
 }
 
 const INGREDIENT_PRICES = {
@@ -24,7 +25,8 @@ const setIngredients = (state, action) => {
             salad: action.ingredients.salad,
         },
         totalPrice: 2,
-        error: false
+        error: false,
+        building: false
     })
 }
 
@@ -38,7 +40,8 @@ const addIngredient = (state, action) => {
     const upgradedIngredients = updateObject(state.ingredients, updatedIngredient)
     const updatedState = {
         ingredients: upgradedIngredients,
-        totalPrice: state.totalPrice + INGREDIENT_PRICES[action.ingredientName]
+        totalPrice: state.totalPrice + INGREDIENT_PRICES[action.ingredientName],
+        building: true
     }
     return updateObject(state, updatedState)
 }
@@ -49,7 +52,8 @@ const removeIngredient = (state, action) => {
     const upgradedIngredients = updateObject(state.ingredients, updatedIngredient)
     const updatedState = {
         ingredients: upgradedIngredients,
-        totalPrice: state.totalPrice - INGREDIENT_PRICES[action.ingredientName]
+        totalPrice: state.totalPrice - INGREDIENT_PRICES[action.ingredientName],
+        building: true
     }
     return updateObject(state, updatedState)
 }

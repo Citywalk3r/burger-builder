@@ -3,10 +3,6 @@ import Button from '../../UI/Button/Button'
 
 //This doesn't have to be a class based component
 class OrderSummary extends Component {
-    
-    componentWillUpdate() {
-        console.log('[OrderSummary] will update')
-    }
 
     render(){
 
